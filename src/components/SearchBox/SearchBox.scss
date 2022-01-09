@@ -1,0 +1,80 @@
+@import './src/variables';
+
+.search{
+    &-box{
+        display: grid;
+        background-color: white;
+        padding: $standardPadding;
+    }
+
+    &-form{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        padding: $standardPadding;
+    }
+
+    &-input{
+        font-size: $fontSize;
+        margin: 0 5px;
+        border: 1px solid;
+        border-color: $borderColor;
+        @media (max-width: 500px){
+            font-size: 15px;
+        }
+    }
+
+    &-btn{
+        cursor: pointer;
+        font-size: $fontSizeButtons;   
+        background-color: #f6f8fa;
+        color: #24292f;
+        border: 1px solid;
+        border-radius: $borderRadius;
+        border-color: $borderColor;
+        padding: $standardPadding;
+        @media (max-width: 500px){
+            font-size: 15px;
+        }
+
+        &:hover {
+            background-color: #d8dee4;
+            transition: all 0.2s ease-out;
+        }
+    }
+}
+
+.pagination{
+    visibility: hidden;
+
+    &__display{
+        visibility: visible;
+
+        .paginationBtns {
+            width: 80%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            padding: 10px;
+            bottom: 0;
+
+            .paginationBtn {
+                cursor: pointer;
+                padding: 10px;
+                margin: 10px;
+                border-radius: $borderRadius;
+
+                &:hover {
+                    background-color: lightblue;
+                } 
+                    
+                &__paginationActive{
+                    background-color: #0969da;
+                    color: $fontColor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import './src/variables';
+
+.results-summary{
+    visibility: hidden;
+
+    &_inputSearched{
+        visibility:visible;
+        padding: 0 20px;
+        font-size: $fontSize;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 500px){
+            font-size: 15px;
+        }
+    }
+}
+
+.sorting{
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &-label{
+        font-size: 18px;
+        padding: 10px 0 ;
+        @media (max-width: 500px){
+            font-size: 12px;
+        }
+    }
+
+    &-select{
+        cursor: pointer;
+        font-size: $fontSizeButtons;   
+        background-color: #f6f8fa;
+        color: #24292f;
+        border: 1px solid;
+        border-radius: $borderRadius;
+        border-color: $borderColor;
+        padding: $standardPadding;
+        &:hover {
+            background-color: #d8dee4;
+            transition: all 0.2s ease-out;
+        }
+        @media (max-width: 500px){
+            font-size: 12px;
+        }
+    }
+}
